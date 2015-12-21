@@ -5,9 +5,6 @@ HardwareBreakpoint* HWBP = NULL;
 
 LONG WINAPI pFirstExceptionHandler(PEXCEPTION_POINTERS Exception)
 {
-	MessageBox(0, "Exception", 0, 0);
-	if ((DWORD)Exception->ExceptionRecord->ExceptionAddress == 0xC913A80)
-		MessageBox(0, "HUD_Frame", 0, 0);
 	return EXCEPTION_CONTINUE_SEARCH;
 }
 
